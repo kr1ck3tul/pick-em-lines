@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-background: #0c0e0d;
+  --color-foreground: #ece8df;
+  --color-card: #141816;
+  --color-card-foreground: #ece8df;
+  --color-muted: #1c211e;
+  --color-muted-foreground: #9aa39c;
+  --color-border: #2a312c;
+  --color-primary: #c5a059;
+  --color-primary-foreground: #14120c;
+  --color-secondary: #1e2420;
+  --color-secondary-foreground: #ece8df;
+  --color-destructive: #c45c4a;
+  --color-destructive-foreground: #fff7f4;
+  --color-ring: #c5a059;
+  --color-win: #2f6b45;
+  --color-win-foreground: #b7e4c4;
+  --color-loss: #7a3a32;
+  --color-loss-foreground: #f3c0b8;
+  --color-tie: #6b5a2e;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  html,
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
